@@ -137,10 +137,10 @@ function presentTask(name, dueDate, dueTime, taskId, isFinished) {
     let taskList = document.getElementById("taskList");
     const Todate = new Date();
     const DueDateComp = new Date(dueDate + 'T' + dueTime);
-    // if (Todate > DueDateComp) {
-    //     alert('Please set a futuristic Goal!');
-    //     return;
-    // }
+    if (Todate > DueDateComp) {
+        alert('Please set a futuristic Goal!');
+        return;
+    }
     if (Todate > DueDateComp) {
         labelMessage = 'Task Over Due!'
 
